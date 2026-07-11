@@ -23,7 +23,7 @@
   --font-body: "Inter", "Arial", sans-serif;
 
   /* layout */
-  --container: 1180px;
+  --container: min(1440px, 92vw);
   --radius-sm: 8px;
   --radius: 16px;
   --radius-lg: 28px;
