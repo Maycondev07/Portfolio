@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maycon — Desenvolvedor Full Stack</title>
+<meta name="description" content="Portfólio de Maycon, desenvolvedor Full Stack focado em Python, interfaces modernas e experiências interativas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="m4-nav">
+    <div class="wrap">
+        <a href="#top" class="m4-mark">Maycon</a>
+        <div class="nav" id="navLinks">
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">O que eu faço</a>
+            <a href="#stack">Stack</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato" class="cta">Contato</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
+    </div>
+</nav>
+
+<header class="hero" id="top">
+    <div class="wrap" style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:60px; align-items:center;">
+
+        <div class="reveal">
+            <div class="hero-badges">
+                <span class="badge"><span class="dot"></span> Disponível para projetos</span>
+                <span class="badge">🐍 Python first</span>
+            </div>
+
+            <h1>Eu sou <span class="accent">Maycon</span>,<br>construindo e me aprimorando</h1>
+            <p class="role">// Desenvolvedor Full Stack</p>
+            <p class="lede">Crio jogos, ferramentas e interfaces com Python, HTML, CSS e JavaScript — sempre buscando um toque de animação, 3D ou experiência interativa que faça o projeto ter personalidade.</p>
+
+            <div class="hero-meta">
+                <span>📍 Brasil</span>
+                <span>⚡ Foco em performance</span>
+                <span>🎮 Games &amp; protótipos</span>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                <a href="#contato" class="btn btn-ghost">Fale comigo</a>
+            </div>
+
+            <div class="hero-socials">
+                <a href="https://github.com/Maycondev07" aria-label="GitHub" target="_blank" rel="noopener">GH</a>
+                <a href="https://www.linkedin.com/in/maycon-silva-0b05392b6" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+                <a href="mailto:maycon16112007@gmail.com?subject=Contato pelo Portfólio" aria-label="Email">@</a>
+            </div>
+        </div>
+
+        <div class="reveal">
+            <div class="console">
+                <svg class="console-cat" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M14 20 L20 6 L28 18 Z" fill="#171c2c" stroke="#00ffc2" stroke-width="2"/>
+                    <path d="M50 20 L44 6 L36 18 Z" fill="#171c2c" stroke="#00ffc2" stroke-width="2"/>
+                    <circle cx="32" cy="32" r="20" fill="#171c2c" stroke="#00ffc2" stroke-width="2"/>
+                    <circle cx="25" cy="30" r="2.6" fill="#00ffc2" id="catEyeL"/>
+                    <circle cx="39" cy="30" r="2.6" fill="#00ffc2" id="catEyeR"/>
+                    <path d="M29 38 Q32 41 35 38" stroke="#00ffc2" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+                <div class="console-bar">
+                    <span></span><span></span><span></span>
+                    <span class="path">maycon@dev:~/portfolio</span>
+                </div>
+                <div class="console-body" id="consoleBody">
+                    <div class="console-line"><span class="prompt">$</span> <span id="typedLine"></span><span class="console-cursor"></span></div>
+                    <div id="consoleHistory"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<section class="stats reveal">
+    <div class="wrap stats-grid" id="statsGrid">
+        <div>
+            <div class="stat-num" data-stat="repos">—</div>
+            <div class="stat-label">Repositórios públicos</div>
+        </div>
+        <div>
+            <div class="stat-num" data-stat="followers">—</div>
+            <div class="stat-label">Seguidores no GitHub</div>
+        </div>
+        <div>
+            <div class="stat-num">7</div>
+            <div class="stat-label">Projetos no portfólio</div>
+        </div>
+        <div>
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Xícaras de café</div>
+        </div>
+    </div>
+</section>
+
+<section id="servicos">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="eyebrow">O que eu faço</p>
+            <h2>Da lógica ao pixel</h2>
+            <p>Três frentes onde eu curto mais colocar a mão na massa.</p>
+        </div>
+
+        <div class="services-grid reveal">
+            <div class="service-card">
+                <div class="service-icon">🐍</div>
+                <h3>Python &amp; Lógica</h3>
+                <p>Jogos, calculadoras e ferramentas com foco em lógica de programação e banco de dados.</p>
+                <div class="tag-row"><span>Python</span><span>SQLite</span><span>Automação</span></div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Front-end &amp; Interfaces</h3>
+                <p>Páginas responsivas com HTML5 e CSS3, animações suaves e atenção a cada detalhe visual.</p>
+                <div class="tag-row"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🕹️</div>
+                <h3>Protótipos &amp; Experiências</h3>
+                <p>Mini-jogos, animações e experimentos interativos que fogem do óbvio.</p>
+                <div class="tag-row"><span>Interativo</span><span>Animação</span><span>Criatividade</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="stack">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="eyebrow">Tech stack</p>
+            <h2>Ferramentas do dia a dia</h2>
+            <p>O que eu mais uso pra transformar ideia em código.</p>
+        </div>
+
+        <div class="tech-grid reveal">
+            <span class="tech-pill"><span class="sw" style="background:#3776ab"></span>Python</span>
+            <span class="tech-pill"><span class="sw" style="background:#e34c26"></span>HTML5</span>
+            <span class="tech-pill"><span class="sw" style="background:#2965f1"></span>CSS3</span>
+            <span class="tech-pill"><span class="sw" style="background:#f0db4f"></span>JavaScript</span>
+            <span class="tech-pill"><span class="sw" style="background:#00ffc2"></span>SQLite</span>
+            <span class="tech-pill"><span class="sw" style="background:#f05033"></span>Git &amp; GitHub</span>
+            <span class="tech-pill"><span class="sw" style="background:#2fa9ff"></span>Three.js</span>
+            <span class="tech-pill"><span class="sw" style="background:#8a93a6"></span>VS Code</span>
+        </div>
+    </div>
+</section>
+
+<section id="projetos">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <p class="eyebrow">Projetos em destaque</p>
+            <h2>Coisas que eu construí</h2>
+            <p>Uma seleção dos projetos que mais gosto de mostrar.</p>
+        </div>
+
+        <div class="filtros reveal">
+            <button onclick="filtrar('todos')" class="active">Todos</button>
+            <button onclick="filtrar('python')">Python</button>
+            <button onclick="filtrar('html')">HTML &amp; CSS</button>
+        </div>
+
+        <div class="projetos reveal">
+
+            <a href="./portifolio/html/skullcat.html" class="card html">
+                <div class="thumb"><img src="img/skullcat.png" alt="SkullCat" loading="lazy"></div>
+                <div class="card-body">
+                    <h3>SkullCat</h3>
+                    <p>Protótipo de loja virtual feito em HTML e CSS.</p>
+                    <div class="card-foot"><span>HTML · CSS · JS</span><span class="go">Ver projeto →</span></div>
+                </div>
+            </a>
+
+            <a href="./portifolio/python/cassino.html" class="card python">
+                <div class="thumb"><img src="img/cassino.png" alt="Cassino Python" loading="lazy"></div>
+                <div class="card-body">
+                    <h3>Cassino Python</h3>
+                    <p>Jogo de cassino com lógica de apostas e banco de dados SQLite.</p>
+                    <div class="card-foot"><span>Python · SQLite</span><span class="go">Ver projeto →</span></div>
+                </div>
+            </a>
+
+            <a href="./portifolio/python/nutri.html" class="card python">
+                <div class="thumb"><img src="img/calculadora.png" alt="Calculadora Nutricional" loading="lazy"></div>
+                <div class="card-body">
+                    <h3>Calculadora Nutricional</h3>
+                    <p>Calcula calorias e macronutrientes para ajudar no controle alimentar.</p>
+                    <div class="card-foot"><span>Python</span><span class="go">Ver projeto →</span></div>
+                </div>
+            </a>
+
+            <a href="./portifolio/html/ghastly.html" class="card html">
+                <div class="thumb"><img src="img/ghastly.png" alt="Ghastly Animation" loading="lazy"></div>
+                <div class="card-body">
+                    <h3>Ghastly Animation</h3>
+                    <p>Animação feita com HTML5 e CSS3 puro.</p>
+                    <div class="card-foot"><span>HTML · CSS</span><span class="go">Ver projeto →</span></div>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="projetos-footer reveal">
+            <a href="./portifolio/projetos.html" class="btn btn-ghost">Ver todos os projetos</a>
+        </div>
+    </div>
+</section>
+
+<section id="sobre">
+    <div class="wrap about">
+        <div class="reveal">
+            <p class="eyebrow">Sobre mim</p>
+            <h2>Maycon — o dev por trás desse portfólio</h2>
+            <p>Sou desenvolvedor focado em Python, APIs e interfaces modernas. Gosto de criar projetos criativos, com animações e experiências interativas que chamam atenção — e que, principalmente, sejam divertidos de usar.</p>
+            <p>Atualmente estou desenvolvendo projetos com foco em performance, design moderno e soluções inteligentes, sempre aprendendo algo novo no processo.</p>
+            <div class="hero-cta">
+                <a href="#contato" class="btn btn-primary">Vamos conversar</a>
+            </div>
+        </div>
+        <ul class="fun-facts reveal">
+            <li>🎮 <span><b>Curioso por games</b> — meus projetos favoritos misturam código com mecânicas de jogo.</span></li>
+            <li>☕ <span><b>Café é combustível</b> — nenhum código sério nasce sem uma xícara por perto.</span></li>
+            <li>🚀 <span><b>Sempre em construção</b> — este portfólio muda tanto quanto minhas ideias.</span></li>
+        </ul>
+    </div>
+</section>
+
+<section id="contato">
+    <div class="wrap">
+        <div class="contact-band reveal">
+            <h2>Bora construir algo juntos?</h2>
+            <p>Tem um projeto em mente ou só quer trocar uma ideia sobre código? Me chama.</p>
+            <div class="hero-cta">
+                <a href="mailto:maycon16112007@gmail.com?subject=Contato pelo Portfólio" class="btn btn-primary">Enviar email</a>
+                <a href="https://github.com/Maycondev07" target="_blank" rel="noopener" class="btn btn-ghost">Ver GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="social">
+            <a href="https://github.com/Maycondev07">GitHub</a>
+            <a href="https://www.linkedin.com/in/maycon-silva-0b05392b6">LinkedIn</a>
+            <a href="mailto:maycon16112007@gmail.com?subject=Contato pelo Portfólio">Email</a>
+        </div>
+        <span>© 2026 Maycon Dev — Todos os direitos reservados</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
