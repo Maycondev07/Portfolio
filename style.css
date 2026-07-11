@@ -327,7 +327,7 @@ section { padding: 100px 0; }
 .console-bar span:nth-child(1) { background: #ff5f56; }
 .console-bar span:nth-child(2) { background: #ffbd2e; }
 .console-bar span:nth-child(3) { background: #27c93f; }
-.console-bar span:nth-child(4) { background: none; top:-200px;}
+.console-bar span:nth-child(4) { background: none; top:-px;}
 
 .console-bar .path {
   margin-right: 30%;
