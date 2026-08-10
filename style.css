@@ -342,7 +342,7 @@ section { padding: 100px 0; }
   font-family: var(--font-mono);
   font-size: 14px;
   min-height: 230px;
-   min-weight: 300px;
+   min-widht: 300px;
 }
 
 .console-line { color: var(--text-dim); margin-bottom: 10px; }
