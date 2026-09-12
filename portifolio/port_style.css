@@ -1,5 +1,5 @@
 /* =========================================================
-   MAYCON DEV — TOKENS (mirrors /style.css so sub-pages match the brand)
+   M4 — TOKENS (mirrors /style.css so sub-pages match the brand)
 ========================================================= */
 
 :root {
@@ -63,11 +63,21 @@ header {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 19px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   text-decoration: none;
+  color: var(--text);
+}
+
+.m4-mark .tag {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 3px 8px;
+  border-radius: 6px;
   background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #04120e;
+  font-weight: 700;
 }
 
 .nav {
