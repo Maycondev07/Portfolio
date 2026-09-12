@@ -1,5 +1,5 @@
 /* =========================================================
-   M4 — DESIGN TOKENS
+   MAYCON DEV — DESIGN TOKENS
 ========================================================= */
 
 :root {
@@ -124,22 +124,11 @@ section { padding: 100px 0; }
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 22px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
   text-decoration: none;
-  color: var(--text);
-}
-
-.m4-mark .tag {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  padding: 4px 9px;
-  border-radius: 6px;
   background: var(--gradient);
-  color: #04120e;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .nav {
@@ -338,11 +327,13 @@ section { padding: 100px 0; }
 .console-bar span:nth-child(1) { background: #ff5f56; }
 .console-bar span:nth-child(2) { background: #ffbd2e; }
 .console-bar span:nth-child(3) { background: #27c93f; }
+.console-bar span:nth-child(4) { background: none; top:-px;}
 
 .console-bar .path {
-  margin-left: auto;
+  margin-right: 30%;
+  margin-left: 10;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 70%;
   color: var(--text-faint);
 }
 
@@ -367,8 +358,8 @@ section { padding: 100px 0; }
 
 .console-cat {
   position: absolute;
-  top: -18px;
-  right: 26px;
+  top: 55px;
+  right: 0px;
   width: 54px;
   height: 54px;
   animation: float 5s ease-in-out infinite;
