@@ -77,6 +77,9 @@ dialog::backdrop{background:rgba(8,12,28,.65)}
 #pvk{max-height:min(55vh,520px);overflow:auto;background:#c9d1de}
 #pvk[hidden]{display:none}
 .btn[hidden]{display:none}
+.cover{display:grid;gap:.6rem;place-content:center;text-align:center;min-height:230px;padding:2rem;background:#0f1b3d;color:#fff}
+.cover strong{font:800 clamp(1.7rem,5vw,2.8rem)/1.05 var(--sans);letter-spacing:-.03em}
+.cover span{font:500 1rem var(--sans);color:#b9c6ff}
 .vc{font:600 .8rem var(--sans);color:var(--acc);border:1.5px solid var(--acc);padding:.05em .55em;border-radius:6px;margin-left:.5rem;vertical-align:middle;white-space:nowrap}
 #pvk img{display:block;margin:0 auto;max-width:100%;height:auto}
 .snap{background:#1e1e1e;border-radius:12px;max-width:600px;margin:1.2rem auto;padding:.8rem 1rem 1rem;box-shadow:0 10px 30px rgba(0,0,0,.35);text-align:left}
@@ -326,12 +329,12 @@ function openRow(r){
   document.getElementById('pvt').textContent=r.querySelector('h3').firstChild.textContent;
   document.getElementById('pvd').textContent=r.querySelector('p').textContent;
   document.getElementById('pvs').textContent=r.querySelector('.st').textContent;
-  fr.hidden=!demo;
+  fr.hidden=true;
   var kb=document.getElementById('pvk'),tp=r.dataset.snap&&document.getElementById('snap-'+r.dataset.snap);
-  kb.hidden=!tp;kb.innerHTML='';if(tp)kb.appendChild(tp.content.cloneNode(true));
-  document.getElementById('pvn').hidden=!demo||!!tp;
+  kb.innerHTML='';if(tp){kb.appendChild(tp.content.cloneNode(true));}else if(demo){var cv=document.createElement('div');cv.className='cover';var t1=document.createElement('strong');t1.textContent=document.getElementById('pvt').textContent;var t2=document.createElement('span');t2.textContent=document.getElementById('pvs').textContent;cv.appendChild(t1);cv.appendChild(t2);kb.appendChild(cv);}kb.hidden=!kb.firstChild;
+  document.getElementById('pvn').hidden=true;
   var rp=document.getElementById('pvr');rp.hidden=!r.dataset.repo;if(r.dataset.repo)rp.href=r.dataset.repo;
-  fr.src=demo?a.href:'about:blank';
+  fr.src='about:blank';
   act.href=a.href;
   act.textContent=demo?'Abrir demo em nova aba':'Ver código no GitHub';
   dlg.showModal();
