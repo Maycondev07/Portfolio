@@ -331,10 +331,10 @@ function openRow(r){
   document.getElementById('pvs').textContent=r.querySelector('.st').textContent;
   fr.hidden=true;
   var kb=document.getElementById('pvk'),tp=r.dataset.snap&&document.getElementById('snap-'+r.dataset.snap);
-  kb.innerHTML='';if(tp){kb.appendChild(tp.content.cloneNode(true));}else if(demo){var cv=document.createElement('div');cv.className='cover';var t1=document.createElement('strong');t1.textContent=document.getElementById('pvt').textContent;var t2=document.createElement('span');t2.textContent=document.getElementById('pvs').textContent;cv.appendChild(t1);cv.appendChild(t2);kb.appendChild(cv);}var live=demo&&!tp;kb.hidden=!kb.firstChild||live;fr.hidden=!live;
-  document.getElementById('pvn').hidden=!live;pvLive=live;
+  kb.innerHTML='';if(tp){kb.appendChild(tp.content.cloneNode(true));}else if(demo){var cv=document.createElement('div');cv.className='cover';var t1=document.createElement('strong');t1.textContent=document.getElementById('pvt').textContent;var t2=document.createElement('span');t2.textContent=document.getElementById('pvs').textContent;cv.appendChild(t1);cv.appendChild(t2);kb.appendChild(cv);}kb.hidden=!kb.firstChild;
+  document.getElementById('pvn').hidden=true;
   var rp=document.getElementById('pvr');rp.hidden=!r.dataset.repo;if(r.dataset.repo)rp.href=r.dataset.repo;
-  fr.src=live?a.href:'about:blank';
+  fr.src='about:blank';
   act.href=a.href;
   act.textContent=demo?'Abrir demo em nova aba':'Ver código no GitHub';
   dlg.showModal();
@@ -347,13 +347,6 @@ document.querySelectorAll('.row').forEach(function(r){
 document.getElementById('pvx').addEventListener('click',function(){dlg.close()});
 dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
 dlg.addEventListener('close',function(){fr.src='about:blank'});
-var pvLive=false;
-document.addEventListener('securitypolicyviolation',function(e){
-  if(dlg.open&&pvLive&&/frame|child/.test(e.violatedDirective)){
-    pvLive=false;fr.hidden=true;document.getElementById('pvn').hidden=true;
-    document.getElementById('pvk').hidden=false;
-  }
-});
 </script>
 </body>
 </html>
